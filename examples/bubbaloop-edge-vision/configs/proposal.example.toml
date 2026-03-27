@@ -1,0 +1,19 @@
+# Example runtime config for a future Bubbaloop node (not loaded by the stub crate yet).
+# Copy to your node’s config directory when wiring `bubbaloop node start …`.
+
+mode = "birds_eye" # birds_eye | panorama | surround
+backend = "gpu_cuda" # cpu | gpu_cube_cl | gpu_cuda
+
+[camera]
+# Instance name must match rtsp-camera / v4l2 config (see bubbaloop-nodes-official).
+instance = "front"
+
+[birds_eye.calibration]
+# Future: path to homography or full camera YAML for kornia-rs loaders.
+homography_path = "/etc/bubbaloop/calib/front_to_ground.json"
+
+[panorama]
+ring_buffer_len = 8
+
+[surround.cameras]
+instances = ["front", "rear", "left", "right"]

@@ -1,0 +1,22 @@
+[package]
+name = "bubbaloop-edge-vision"
+version = { workspace = true }
+authors = { workspace = true }
+edition = { workspace = true }
+rust-version = { workspace = true }
+description = "Architecture skeleton: GPU-oriented edge vision (bird's-eye, panorama, surround) for Bubbaloop + kornia-rs proposals"
+homepage = { workspace = true }
+repository = { workspace = true }
+license = { workspace = true }
+categories = { workspace = true }
+include = { workspace = true }
+publish = false
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+
+[[bin]]
+name = "edge-vision-arch"
+path = "src/bin/edge_vision_arch.rs"
